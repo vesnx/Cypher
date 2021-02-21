@@ -17,7 +17,7 @@
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.8.3" />
     <PackageReference Include="MSTest.TestAdapter" Version="2.1.2" />
     <PackageReference Include="MSTest.TestFramework" Version="2.1.2" />
-    <PackageReference Include="Walter.Cypher" Version="2021.2.16.1" />
+    <PackageReference Include="Walter.Cypher" Version="2021.2.19.2" />
   </ItemGroup>
 
   <ItemGroup>
