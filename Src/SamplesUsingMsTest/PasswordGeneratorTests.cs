@@ -1,4 +1,19 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿// ***********************************************************************
+// Assembly         : Walter.Web.CypherTests
+// Author           : Walter Verhoeven
+// Created          : Fri 01-Mar-2024
+//
+// Last Modified By : Walter Verhoeven
+// Last Modified On : Fri 01-Mar-2024
+// ***********************************************************************
+// <copyright file="PasswordGeneratorTests.cs" company="Walter.Web.CypherTests">
+//     Copyright (c) VESNX SA. All rights reserved.
+// </copyright>
+// <summary>
+// use tests to show case some features
+// </summary>
+// ***********************************************************************
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Walter.Cypher.Tests
 {

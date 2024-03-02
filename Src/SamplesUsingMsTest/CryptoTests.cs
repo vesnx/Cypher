@@ -1,4 +1,19 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿// ***********************************************************************
+// Assembly         : Walter.Web.CypherTests
+// Author           : Walter Verhoeven
+// Created          : Fri 01-Mar-2024
+//
+// Last Modified By : Walter Verhoeven
+// Last Modified On : Fri 01-Mar-2024
+// ***********************************************************************
+// <copyright file="CryptoTests.cs" company="Walter.Web.CypherTests">
+//     Copyright (c) VESNX SA. All rights reserved.
+// </copyright>
+// <summary>
+// use tests to show case some features
+// </summary>
+// ***********************************************************************
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.IO;
 
@@ -25,12 +40,18 @@ namespace Walter.Cypher.Tests
         {
             var file = new FileInfo("Walter.Cypher.pfx");
             if (!file.Exists)
-                Assert.Inconclusive("Cert not found");
+                CreateCertificate(file, "123456789");
 
             var cypkered = Crypto.Cipher("Test", file.FullName, "123456789");
             Assert.IsTrue(cypkered != null);
             Crypto.Free();
         }
+
+        void CreateCertificate(FileInfo file, string password) 
+        {
+            PfxCertificateGenerator.GeneratePfxCertificate(file.FullName, password);
+        }
+
 
         [TestMethod()]
         public void CypherTestDefault()
@@ -70,7 +91,7 @@ namespace Walter.Cypher.Tests
             var file = new FileInfo("Walter.Cypher.pfx");
 
             if (!file.Exists)
-                Assert.Inconclusive("Cert not found");
+                CreateCertificate(file, "123456789");
 
             var cypkered = Crypto.Cipher(test, file.FullName, "123456789");
             var expect = Crypto.Decrypt(cypkered, file.FullName, "123456789");
@@ -93,8 +114,8 @@ namespace Walter.Cypher.Tests
         {
             var test = Guid.NewGuid().ToString();
 
-            var cypkered = Crypto.CipherZip(test, "123456789");
-            var expect = Crypto.DecipherZip(cypkered, "123456789");
+            var cypkered = Crypto.Zip(test, "123456789");
+            var expect = Crypto.UnZip(cypkered, "123456789");
             Assert.AreEqual(test, expect);
         }
 
@@ -193,8 +214,8 @@ namespace Walter.Cypher.Tests
             }
             var test = sb.ToString();
 
-            var cypkered = Crypto.CipherZip(test, "Password");
-            var expect = Crypto.DecipherZip(cypkered, "Password");
+            var cypkered = Crypto.Zip(test, "Password");
+            var expect = Crypto.UnZip(cypkered, "Password");
             Assert.AreEqual(test, expect);
         }
 
@@ -208,8 +229,8 @@ namespace Walter.Cypher.Tests
             }
             var test = sb.ToString();
 
-            var cypkered = Crypto.CipherZip(test);
-            var expect = Crypto.DecipherZip(cypkered);
+            var cypkered = Crypto.Zip(test);
+            var expect = Crypto.UnZip(cypkered);
             Assert.AreEqual(test, expect);
 
         }

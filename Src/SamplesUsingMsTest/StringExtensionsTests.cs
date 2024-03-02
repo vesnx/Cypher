@@ -1,7 +1,22 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System.Text;
+﻿// ***********************************************************************
+// Assembly         : Walter.Web.CypherTests
+// Author           : Walter Verhoeven
+// Created          : Fri 01-Mar-2024
+//
+// Last Modified By : Walter Verhoeven
+// Last Modified On : Fri 01-Mar-2024
+// ***********************************************************************
+// <copyright file="StringExtensionsTests.cs" company="Walter.Web.CypherTests">
+//     Copyright (c) VESNX SA. All rights reserved.
+// </copyright>
+// <summary>
+// use tests to show case some features
+// </summary>
+// ***********************************************************************
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+
 using System.Collections.Generic;
-using System;
+using System.Text;
 
 namespace Walter.Cypher.Tests
 {
