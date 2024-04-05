@@ -1,10 +1,16 @@
-﻿# Delphi Inside: The Choice for Native Calls and AoT
+# Delphi Inside
+
+
+Introducing the WALTER Framework: **W**orkable **A**lgorithms for **L**ocation-aware **T**ransmission, **E**ncryption **R**esponse. Designed for modern developers, WALTER is a groundbreaking suite of NuGet packages crafted for excellence in .NET Standard 2.0, 2.1, Core 3.1, and .NET 6, 7, 8, and Pascall and C++ environments. By integrating Delphi's native development strengths, we’ve enhanced WALTER’s encryption capabilities to be robust and future-proof, ensuring that it excels in performance, stability, and cross-platform support.
+
+Whether you're tackling networking, encryption, or secure communication, WALTER offers unparalleled efficiency and precision in processing, making it an essential tool for developers prioritizing speed, security, and memory management in their applications.
+
 
 In the evolving landscape of software development, the need for applications that are both robust and capable of withstanding the test of time is paramount. As we continuously strive to enhance the WALTER framework's capabilities, our journey led us to a pivotal decision: transitioning to Delphi for handling native calls. This decision was not made lightly but was informed by Delphi's unparalleled strength in areas where .NET, despite its vast ecosystem, falls short, particularly in Ahead-of-Time (AoT) compilation and the support for long-term stability operations.
 
 ## Why Delphi?
 
-Delphi stands out as a leading development platform that inherently supports AoT compilation, allowing for the creation of platform-specific binaries without any compromise on quality or functionality. Unlike .NET, which offers limited AoT capabilities and lacks comprehensive support for certain critical features necessary for long-term stability, Delphi ensures that every compiled application is optimized for the target platform right from the start. This optimization includes not just performance enhancements but also an increased reliability over extended periods, which is crucial for applications requiring decade-long operational lifecycles.
+Delphi stands out as a leading development platform that inherently supports AoT compilation, allowing for the creation of platform-specific binaries without compromising quality or functionality. Unlike .NET, which offers limited AoT capabilities and lacks comprehensive support for certain critical features necessary for long-term stability, Delphi immediately ensures that every compiled application is optimized for the target platform. This optimization includes performance enhancements and increased reliability over extended periods, which is crucial for applications requiring decade-long operational lifecycles.
 
 ## Enhanced Security with Delphi
 
@@ -13,12 +19,12 @@ One of the decisive factors in our pivot to Delphi is the handling of Free-After
 
 ### Enhancing Buffer Overflow Protection
 
-Moreover, the transition to Delphi significantly bolsters our defenses against buffer overflow attacks, especially in the sensitive area of .NET's interaction with Windows header files. While .NET provides a managed environment that abstracts many low-level operations, direct interactions with the OS through P/Invoke and similar mechanisms expose applications to buffer overflow vulnerabilities. These vulnerabilities are particularly insidious because they can lead to unauthorized access, data corruption, and other security breaches. Delphi's rigorous compile-time and runtime checks, combined with its more granular control over memory allocation and data handling, significantly mitigate the risk of buffer overflows. This heightened level of security is critical when our native calls interface with the underlying Windows OS, ensuring that data integrity and application stability are maintained.
+Moreover, the transition to Delphi significantly bolsters our defenses against buffer overflow attacks, especially in the sensitive area of .NET's interaction with Windows header files. While .NET provides a managed environment that abstracts many low-level operations, direct interactions with the OS through P/Invoke and similar mechanisms expose applications to buffer overflow vulnerabilities. These vulnerabilities are unacceptable because they can lead to unauthorized access, data corruption, and other security breaches. Delphi's rigorous compile-time and runtime checks, combined with its more granular control over memory allocation and data handling, significantly mitigate the risk of buffer overflows. This heightened level of security is critical when our native calls interface with the underlying Windows OS, ensuring that data integrity and application stability are maintained.
 
 
 ## Recognized Memory Safety
 
-Delphi's commitment to security and stability is further validated by its inclusion in the Department of Defense's (DoD) list of Memory Safe Languages. This acknowledgment highlights Delphi's robustness in managing memory safely and efficiently, a critical component in preventing vulnerabilities and ensuring the security of software applications. The DoD's recognition underscores the strategic advantage of choosing Delphi for the development of applications where memory safety is paramount. For more information on Delphi's designation as a Memory Safe Language, refer to the DoD's guidelines on Software Memory Safety: https://media.defense.gov/2022/Nov/10/2003112742/-1/-1/0/CSI_SOFTWARE_MEMORY_SAFETY.PDF.
+Delphi's commitment to security and stability is further validated by its inclusion in the Department of Defense's (DoD) list of Memory Safe Languages. This acknowledgment highlights Delphi's robustness in managing memory safely and efficiently, a critical component in preventing vulnerabilities and ensuring the security of software applications. The DoD's recognition underscores the strategic advantage of choosing Delphi for the development of applications where memory safety is paramount. For more information on Delphi's designation as a memory-safe language, refer to the DoD's guidelines on Software Memory Safety: https://media.defense.gov/2022/Nov/10/2003112742/-1/-1/0/CSI_SOFTWARE_MEMORY_SAFETY.PDF.
 
 
 ### Unmatched AoT Support
